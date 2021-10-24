@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>Квест с/сч</title>
+  </head>
+  <body>
+    <p class="pict">
+      <img src="password.jpg" width="550" height="420" />
+    </p>
+
+    <form id="quiz" name="quiz">
+      <input id="textbox" type="text" name="question1" />
+      <input
+        id="button"
+        type="button"
+        value="Открыть дверь"
+        onclick="check();"
+      />
+    </form>
+    <h2 id="ans" class="text"></h2>
+
+    <script>
+      function check() {
+        var question1 = document.quiz.question1.value;
+        let answer = [];
+        if (question1 == "317") {
+          answer.push(
+            '<a href="final.html">Дверь со скрипом отворилась. Выйти наружу </a>'
+          );
+          document.getElementById("ans").innerHTML =
+            "<div>" + answer.join("") + "</div>";
+        } else {
+          document.getElementById("ans").innerHTML = "Дверь заперта";
+        }
+      }
+    </script>
+
+    <h2>
+      <a href="index.html" class="text">Вернуться к изучению комнаты ></a>
+    </h2>
+    <style>
+      body {
+        background-color: 000;
+      }
+      .text {
+        color: white;
+      }
+      .textarea {
+        font-size: 30pt;
+      }
+      .pict {
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+    </style>
+  </body>
+</html>
